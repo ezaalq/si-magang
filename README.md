@@ -18,6 +18,8 @@ Tampilan Mahasiswa (Sneat Template)
   <img src="public/Dokumentasi-projek/Screenshot%202025-11-02%20104656.png" alt="Tampilan Dashboard Mahasiswa" width="800"/>
 </p>
 
+#### Lihat Difolder Public/Dokumentasi-Projek untuk melihat Semua Tampilan SI-MAGANG
+
 ## ⚡ Tech Stack
 
 | Kategori | Teknologi |
