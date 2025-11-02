@@ -5,10 +5,14 @@
 > Dibangun menggunakan **Laravel 12** dan **Filament Admin Panel**, sistem ini menjadi jembatan kolaborasi antara mahasiswa, koordinator lapangan, perusahaan, dan dinas terkait.
 
 ---
+### 🖥️ Preview Antarmuka
+Dashboard Admin (Filament)
 
 <p align="center">
   <img src="public/Dokumentasi-projek/Screenshot%202025-11-02%20100514.png" alt="Tampilan Dashboard Admin" width="800"/>
 </p>
+
+Tampilan Mahasiswa (Sneat Template)
 
 <p align="center">
   <img src="public/Dokumentasi-projek/Screenshot%202025-11-02%20104656.png" alt="Tampilan Dashboard Mahasiswa" width="800"/>
@@ -109,16 +113,6 @@ php artisan serve
 | 🎓 **Mahasiswa**            | `/login`       | [mahasiswa@example.com](mailto:mahasiswa@example.com)     | password |
 | 🏢 **Perusahaan**           | `/login`       | [perusahaan@example.com](mailto:perusahaan@example.com)   | password |
 | 🏛️ **Dinas / Koordinator**  | `/login`       | [koordinator@example.com](mailto:koordinator@example.com) | password |
-
-
-### 🖥️ Preview Antarmuka
-Dashboard Admin (Filament)
-
-Tampilan Mahasiswa (Sneat Template)
-
-Form Absensi & Kegiatan
-
-Laporan Akhir & Sertifikat
 
 ### 🧱 Struktur Folder Penting
 ```
