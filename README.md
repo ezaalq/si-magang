@@ -6,6 +6,14 @@
 
 ---
 
+<p align="center">
+  <img src="public/dokumentasi-projek/Screenshot 2025-11-02 100514.png" alt="Tampilan Dashboard Admin" width="800"/>
+</p>
+
+<p align="center">
+  <img src="public/dokumentasi-projek/Screenshot-2025-11-02-104656.png" alt="Tampilan Dashboard Admin" width="800"/>
+</p>
+
 ## ⚡ Tech Stack
 
 | Kategori | Teknologi |
