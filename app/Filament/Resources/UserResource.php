@@ -10,6 +10,8 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Response;
 
 class UserResource extends Resource
 {
@@ -126,6 +128,31 @@ class UserResource extends Resource
                         'videographer' => 'Videographer',
                         'prerelease' => 'Pre-Release',
                     ]),
+            ])
+            ->headerActions([
+                Tables\Actions\Action::make('exportMahasiswaNames')
+                    ->label('Export Mahasiswa Names')
+                    ->icon('heroicon-o-document-arrow-down')
+                    ->action(function () {
+                        $mahasiswa = User::where('role', 'mahasiswa')->get();
+
+                        Log::info('Export Mahasiswa Names: Fetched ' . $mahasiswa->count() . ' records');
+
+                        $csvData = "Name\n";
+
+                        foreach ($mahasiswa as $user) {
+                            $csvData .= '"' . $user->name . '"' . "\n";
+                            Log::info('Export Mahasiswa Names: Adding name: ' . $user->name);
+                        }
+
+                        Log::info('Export Mahasiswa Names: CSV data length: ' . strlen($csvData));
+
+                        return Response::streamDownload(function () use ($csvData) {
+                            echo $csvData;
+                        }, 'mahasiswa_names.csv', [
+                            'Content-Type' => 'text/csv',
+                        ]);
+                    }),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

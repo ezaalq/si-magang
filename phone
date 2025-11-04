@@ -1,0 +1,22 @@
+
+   Psy\Exception\ParseErrorException 
+
+  PHP Parse error: Syntax error, unexpected '.' on line 1
+
+  at C:\laragon\www\si-magang\vendor\psy\psysh\src\Exception\ParseErrorException.php:44
+    [90m 40[0m[90m▕ [0m[90;3m     * @param \PhpParser\Error $e[0m
+    [90m 41[0m[90m▕ [0m[90;3m     */[0m
+    [90m 42[0m[90m▕ [0m[90;3m    [0m[35;1mpublic static function [0m[39;1mfromParseError[0m[35;1m(\PhpParser\Error [0m[39;1m$e[0m[35;1m): [0m[39;1mself[0m
+    [90m 43[0m[90m▕ [0m[39;1m    [0m[35;1m{[0m
+[31;1m  ➜ [0m[3;1m 44[0m[90m▕ [0m[35;1m        return new [0m[39;1mself[0m[35;1m([0m[39;1m$e[0m[35;1m->[0m[39;1mgetRawMessage[0m[35;1m(), [0m[39;1m$e[0m[35;1m->[0m[39;1mgetAttributes[0m[35;1m());[0m
+    [90m 45[0m[90m▕ [0m[35;1m    }[0m
+    [90m 46[0m[90m▕ [0m[35;1m}[0m
+    [90m 47[0m[90m▕ [0m
+
+  1   C:\laragon\www\si-magang\vendor\psy\psysh\src\CodeCleaner.php:560
+      Psy\Exception\ParseErrorException::fromParseError(Object(PhpParser\Error))
+
+  2   C:\laragon\www\si-magang\vendor\psy\psysh\src\CodeCleaner.php:283
+      Psy\CodeCleaner::parse("<?php echo 'Testing CSV export logic'; $users = App\Models\User::where('role', 'mahasiswa')->take(3)->get(); echo 'Found ' . count($users) . ' users\n'; $csvData = "NIM,Name,Email,Kategori,Phone,Address\n"; foreach ($users as $record) { echo 'Processing: ' . $record->nim . '\n'; $csvData .= '"' . $record- . '",'; $csvData .= '"' . $record- . '",'; $csvData .= '"' . $record- . '",'; $csvData .= '"' . $record- . '",'; $csvData .= '"' . $record- . '",'; $csvData .= '"' . str_replace('"', '""', $record->address ?? '') . '"' . "\n"; } echo 'CSV Sample:\n' . substr($csvData, 0, 300) . '...\n'; echo 'Test completed.';
+")
+
